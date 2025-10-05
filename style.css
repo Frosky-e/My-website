@@ -1,0 +1,249 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/Images/japan-landscape.jpg') no-repeat center center/cover;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.profile-card {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+.tagline {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.user-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+.social-icons a:hover {
+    color: #7289da;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.discord-link {
+    color: #5865F2;
+    font-size: 35px;
+    transition: all 0.3s ease;
+    text-shadow: 
+        0 0 4px rgba(88, 101, 242, 0.5),
+        0 0 8px rgba(88, 101, 242, 0.3);
+}
+
+.discord-link:hover {
+    color: #8ea1f7;
+    transform: scale(1.2);
+    text-shadow:
+        0 0 5px #5865F2,
+        0 0 10px #5865F2,
+        0 0 20px #5865F2,
+        0 0 30px rgba(88, 101, 242, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.views {
+    position: absolute;
+    bottom: 18px;
+    left: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+@media (max-width: 576px) {
+    .profile-card {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .username {
+        font-size: 16px;
+    }
+
+    .bio {
+        font-size: 13px;
+    }
+
+    .social-icons a {
+        font-size: 28px;
+    }
+
+    .user-box {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .views {
+        font-size: 20px;
+        bottom: 14px;
+        left: 10px;
+    }
+}
+
+.glow-name {
+    color: #fff;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px rgba(255, 255, 255, 0.6),
+        0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+
+.volume-control {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+    width: 50px; 
+}
+
+.volume-control.expanded {
+    width: 160px;
+    padding: 10px 15px;
+}
+
+
+.volume-control i {
+    color: white;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+#volumeSlider {
+    width: 100px;
+    display: inline-block;
+    appearance: none;
+    background: #ffffff50;
+    height: 4px;
+    border-radius: 2px;
+    outline: none;
+    transition: opacity 0.3s ease;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+
+#splash {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 99999;
+    user-select: none;
+     text-shadow:
+        0 0 2px #fff,
+        0 0 4px rgba(255, 255, 255, 0.6),
+        0 0 6px rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+
+
+#main-content {
+    display: none;
+}
+
+
+
+
+
+
+
